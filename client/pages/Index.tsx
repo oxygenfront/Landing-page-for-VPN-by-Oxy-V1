@@ -25,22 +25,23 @@ export default function Index() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="border-b border-border/40 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+        <div className="container mx-auto px-4 h-14 sm:h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Shield className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold">SecureVPN</span>
+            <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
+            <span className="text-lg sm:text-xl font-bold">SecureVPN</span>
           </div>
-          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <MessageCircle className="w-4 h-4 mr-2" />
-            Начать с бота
+          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-2">
+            <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+            <span className="hidden xs:inline">Начать с бота</span>
+            <span className="xs:hidden">Начать</span>
           </Button>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
+      <section className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
-        <div className="container mx-auto px-4 relative">
+        <div className="container mx-auto px-4 sm:px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -56,10 +57,10 @@ export default function Index() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-4 sm:mb-6"
             >
-              Ваша приватность
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <span className="block sm:inline">Ваша приватность</span>
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent block sm:inline">
                 {" "}
                 защищена
               </span>
@@ -68,7 +69,7 @@ export default function Index() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0"
             >
               Получите мгновенный доступ к премиум VPN серверам по всему миру
               через наш Telegram бот. Безопасно, быстро и невероятно просто в
@@ -78,29 +79,32 @@ export default function Index() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0"
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto"
               >
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-6 w-full sm:w-auto"
                 >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Получить VPN сейчас
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
+                  <span className="hidden sm:inline">Получить VPN сейчас</span>
+                  <span className="sm:hidden">Получить VPN</span>
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-1 sm:ml-2" />
                 </Button>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto"
               >
                 <Button
                   variant="outline"
                   size="lg"
-                  className="text-lg px-8 py-6 border-primary/20 hover:bg-primary/10"
+                  className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-6 border-primary/20 hover:bg-primary/10 w-full sm:w-auto"
                 >
                   Смотреть тарифы
                 </Button>
@@ -110,7 +114,7 @@ export default function Index() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.8 }}
-              className="mt-12 flex items-center justify-center space-x-8 text-sm text-muted-foreground"
+              className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm text-muted-foreground px-4"
             >
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -118,7 +122,7 @@ export default function Index() {
                 transition={{ delay: 1 }}
                 className="flex items-center"
               >
-                <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-primary mr-1 sm:mr-2" />
                 Политика без логов
               </motion.div>
               <motion.div
@@ -127,7 +131,7 @@ export default function Index() {
                 transition={{ delay: 1.1 }}
                 className="flex items-center"
               >
-                <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-primary mr-1 sm:mr-2" />
                 50+ стран
               </motion.div>
               <motion.div
@@ -136,7 +140,7 @@ export default function Index() {
                 transition={{ delay: 1.2 }}
                 className="flex items-center"
               >
-                <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-primary mr-1 sm:mr-2" />
                 Поддержка 24/7
               </motion.div>
             </motion.div>
@@ -145,18 +149,18 @@ export default function Index() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 border-t border-border/40">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-12 sm:py-16 md:py-20 border-t border-border/40">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
               Почему выбрать наш VPN?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4 sm:px-0">
               Ощутите идеальное сочетание безопасности, скорости и простоты
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -333,48 +337,52 @@ export default function Index() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-muted/20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-12 sm:py-16 md:py-20 bg-muted/20">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
               Начните работу в 3 простых шага
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground px-4 sm:px-0">
               Настройка VPN никогда не была такой простой
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-primary-foreground">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center px-4 sm:px-0">
+              <div className="bg-primary w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl sm:text-2xl font-bold text-primary-foreground">
                 1
               </div>
-              <h3 className="text-xl font-semibold mb-2">Запустите бота</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                Запустите бота
+              </h3>
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Нажмите кнопку, чтобы открыть наш Telegram бот и начать работу
                 мгновенно
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-primary-foreground">
+            <div className="text-center px-4 sm:px-0">
+              <div className="bg-primary w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl sm:text-2xl font-bold text-primary-foreground">
                 2
               </div>
-              <h3 className="text-xl font-semibold mb-2">Выберите тариф</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                Выберите тариф
+              </h3>
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Выберите из наших гибких тарифных планов тот, который подходит
                 именно вам
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-primary-foreground">
+            <div className="text-center px-4 sm:px-0">
+              <div className="bg-primary w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl sm:text-2xl font-bold text-primary-foreground">
                 3
               </div>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-lg sm:text-xl font-semibold mb-2">
                 Подключайтесь и наслаждайтесь
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Получите ваши VPN данные и начните безопасный интернет-серфинг
                 прямо сейчас
               </p>
@@ -394,19 +402,19 @@ export default function Index() {
       </section>
 
       {/* Pricing */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
               Единый тариф, максимум возможностей
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground px-4 sm:px-0">
               Один тариф со всеми возможностями - выберите удобный период
               подписки
             </p>
@@ -419,15 +427,17 @@ export default function Index() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-primary/10 via-secondary/5 to-primary/5 rounded-2xl p-8 mb-12 border border-primary/20"
+              className="bg-gradient-to-br from-primary/10 via-secondary/5 to-primary/5 rounded-2xl p-6 sm:p-8 mb-8 sm:mb-12 border border-primary/20"
             >
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2">Что входит в тариф</h3>
-                <p className="text-muted-foreground">
+              <div className="text-center mb-6 sm:mb-8">
+                <h3 className="text-xl sm:text-2xl font-bold mb-2">
+                  Что входит в тариф
+                </h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
                   Все возможности включены в единый тариф
                 </p>
               </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -435,11 +445,13 @@ export default function Index() {
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Infinity className="w-8 h-8 text-primary" />
+                  <div className="bg-primary/10 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Infinity className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                   </div>
-                  <h4 className="font-semibold mb-1">Безлимитный трафик</h4>
-                  <p className="text-sm text-muted-foreground">
+                  <h4 className="text-sm sm:text-base font-semibold mb-1">
+                    Безлимитный трафик
+                  </h4>
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     Без ограничений
                   </p>
                 </motion.div>
@@ -450,11 +462,13 @@ export default function Index() {
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Zap className="w-8 h-8 text-primary" />
+                  <div className="bg-primary/10 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                   </div>
-                  <h4 className="font-semibold mb-1">До 1 Гбит/с</h4>
-                  <p className="text-sm text-muted-foreground">
+                  <h4 className="text-sm sm:text-base font-semibold mb-1">
+                    До 1 Гбит/с
+                  </h4>
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     Максимальная скорость
                   </p>
                 </motion.div>
@@ -465,11 +479,13 @@ export default function Index() {
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Users className="w-8 h-8 text-primary" />
+                  <div className="bg-primary/10 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Users className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                   </div>
-                  <h4 className="font-semibold mb-1">∞ пользователей</h4>
-                  <p className="text-sm text-muted-foreground">
+                  <h4 className="text-sm sm:text-base font-semibold mb-1">
+                    ∞ пользователей
+                  </h4>
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     На одном токене
                   </p>
                 </motion.div>
@@ -480,11 +496,13 @@ export default function Index() {
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Globe className="w-8 h-8 text-primary" />
+                  <div className="bg-primary/10 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Globe className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                   </div>
-                  <h4 className="font-semibold mb-1">50+ стран</h4>
-                  <p className="text-sm text-muted-foreground">
+                  <h4 className="text-sm sm:text-base font-semibold mb-1">
+                    50+ стран
+                  </h4>
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     Серверы по всему миру
                   </p>
                 </motion.div>
@@ -492,7 +510,7 @@ export default function Index() {
             </motion.div>
 
             {/* Pricing options */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -608,24 +626,24 @@ export default function Index() {
       </section>
 
       {/* Trust Section */}
-      <section className="py-20 bg-muted/20">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-20 bg-muted/20">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
               Почему выбирают нас
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground px-4 sm:px-0">
               Качественный сервис с прозрачными характеристиками
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -725,30 +743,33 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
             Готовы защитить свой интернет?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto px-4 sm:px-0">
             Начните использовать наш VPN сервис сегодня и ощутите интернет без
             ограничений и страхов
           </p>
           <Button
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-6"
           >
-            <MessageCircle className="w-5 h-5 mr-2" />
-            Получить VPN через Telegram бота
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
+            <span className="hidden sm:inline">
+              Получить VPN через Telegram бота
+            </span>
+            <span className="sm:hidden">Получить VPN</span>
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-1 sm:ml-2" />
           </Button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/40 py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+      <footer className="border-t border-border/40 py-8 sm:py-12">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <Shield className="h-6 w-6 text-primary" />
@@ -784,7 +805,7 @@ export default function Index() {
               <h3 className="font-semibold mb-4">Компания</h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li>О нас</li>
-                <li>Политика конфиденциальности</li>
+                <li>Политика конфиденц��альности</li>
                 <li>Условия обслуживания</li>
                 <li>Блог</li>
               </ul>
