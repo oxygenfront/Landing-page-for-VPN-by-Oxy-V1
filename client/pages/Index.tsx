@@ -1,23 +1,17 @@
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import {
-  Shield,
-  Globe,
-  Zap,
-  Lock,
-  MessageCircle,
-  Server,
-  Users,
-  CheckCircle,
-  Star,
   ArrowRight,
-  Smartphone,
-  Laptop,
-  Wifi,
+  CheckCircle,
   Clock,
+  Globe,
   Infinity,
+  MessageCircle,
+  Shield,
+  Users,
+  Zap,
 } from "lucide-react";
 
 export default function Index() {
