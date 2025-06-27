@@ -29,7 +29,7 @@ export default function Index() {
           </div>
           <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
             <MessageCircle className="w-4 h-4 mr-2" />
-            Start with Bot
+            Начать с бота
           </Button>
         </div>
       </header>
@@ -41,18 +41,19 @@ export default function Index() {
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">
               <Zap className="w-3 h-3 mr-1" />
-              Lightning Fast VPN
+              Молниеносный VPN
             </Badge>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-              Your Privacy,
+              Ваша приватность
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 {" "}
-                Protected
+                защищена
               </span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-              Get instant access to premium VPN servers worldwide through our
-              Telegram bot. Secure, fast, and incredibly easy to use.
+              Получите мгновенный доступ к премиум VPN серверам по всему миру
+              через наш Telegram бот. Безопасно, быстро и невероятно просто в
+              использовании.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
@@ -60,7 +61,7 @@ export default function Index() {
                 className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
-                Get VPN Now
+                Получить VPN сейчас
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button
@@ -68,21 +69,21 @@ export default function Index() {
                 size="lg"
                 className="text-lg px-8 py-6 border-primary/20 hover:bg-primary/10"
               >
-                View Plans
+                Смотреть тарифы
               </Button>
             </div>
             <div className="mt-12 flex items-center justify-center space-x-8 text-sm text-muted-foreground">
               <div className="flex items-center">
                 <CheckCircle className="w-4 h-4 text-primary mr-2" />
-                No logs policy
+                Политика без логов
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-4 h-4 text-primary mr-2" />
-                50+ countries
+                50+ стран
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-4 h-4 text-primary mr-2" />
-                24/7 support
+                Поддержка 24/7
               </div>
             </div>
           </div>
@@ -94,11 +95,10 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Choose Our VPN?
+              Почему выбрать наш VPN?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Experience the ultimate combination of security, speed, and
-              simplicity
+              Ощутите идеальное сочетание безопасности, скорости и простоты
             </p>
           </div>
 
@@ -109,11 +109,11 @@ export default function Index() {
                   <Shield className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">
-                  Military-Grade Security
+                  Военная безопасность
                 </h3>
                 <p className="text-muted-foreground">
-                  AES-256 encryption and zero-logs policy ensures your data
-                  stays private
+                  Шифрование AES-256 и политика нулевого логирования гарантируют
+                  конфиденциальность ваших данных
                 </p>
               </CardContent>
             </Card>
@@ -123,10 +123,12 @@ export default function Index() {
                 <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Zap className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Lightning Fast</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  Молниеносная скорость
+                </h3>
                 <p className="text-muted-foreground">
-                  Optimized servers deliver blazing-fast speeds without
-                  compromising security
+                  Оптимизированные серверы обеспечивают невероятную скорость без
+                  ущерба для безопасности
                 </p>
               </CardContent>
             </Card>
@@ -136,9 +138,12 @@ export default function Index() {
                 <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Globe className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Global Access</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  Глобальный доступ
+                </h3>
                 <p className="text-muted-foreground">
-                  50+ server locations worldwide to access content from anywhere
+                  50+ серверов по всему миру для доступа к контенту из любой
+                  точки
                 </p>
               </CardContent>
             </Card>
@@ -149,11 +154,10 @@ export default function Index() {
                   <MessageCircle className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">
-                  Telegram Integration
+                  Интеграция с Telegram
                 </h3>
                 <p className="text-muted-foreground">
-                  Manage your VPN directly through our user-friendly Telegram
-                  bot
+                  Управляйте своим VPN напрямую через наш удобный Telegram бот
                 </p>
               </CardContent>
             </Card>
@@ -163,10 +167,10 @@ export default function Index() {
                 <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Server className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Premium Servers</h3>
+                <h3 className="text-xl font-semibold mb-2">Премиум сер��еры</h3>
                 <p className="text-muted-foreground">
-                  High-performance servers with unlimited bandwidth and 99.9%
-                  uptime
+                  Высокопроизводительные серверы с безлимитным трафиком и 99.9%
+                  аптайма
                 </p>
               </CardContent>
             </Card>
@@ -176,9 +180,11 @@ export default function Index() {
                 <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Users className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Multi-Device</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  Мульти-устройства
+                </h3>
                 <p className="text-muted-foreground">
-                  Protect up to 5 devices simultaneously with one subscription
+                  Защитите до 5 устройств одновременно с одной подпиской
                 </p>
               </CardContent>
             </Card>
@@ -191,10 +197,10 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Get Started in 3 Simple Steps
+              Начните работу в 3 простых шага
             </h2>
             <p className="text-xl text-muted-foreground">
-              Setting up your VPN has never been easier
+              Настройка VPN никогда не была такой простой
             </p>
           </div>
 
@@ -203,10 +209,10 @@ export default function Index() {
               <div className="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-primary-foreground">
                 1
               </div>
-              <h3 className="text-xl font-semibold mb-2">Start the Bot</h3>
+              <h3 className="text-xl font-semibold mb-2">Запустите бота</h3>
               <p className="text-muted-foreground">
-                Click the button to open our Telegram bot and get started
-                instantly
+                Нажмите кнопку, чтобы открыть наш Telegram бот и начать работу
+                мгновенно
               </p>
             </div>
 
@@ -214,9 +220,10 @@ export default function Index() {
               <div className="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-primary-foreground">
                 2
               </div>
-              <h3 className="text-xl font-semibold mb-2">Choose Your Plan</h3>
+              <h3 className="text-xl font-semibold mb-2">Выберите тариф</h3>
               <p className="text-muted-foreground">
-                Select from our flexible pricing options that suit your needs
+                Выберите из наших гибких тарифных планов тот, который подходит
+                именно вам
               </p>
             </div>
 
@@ -224,9 +231,12 @@ export default function Index() {
               <div className="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-primary-foreground">
                 3
               </div>
-              <h3 className="text-xl font-semibold mb-2">Connect & Enjoy</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                Подключайтесь и наслаждайтесь
+              </h3>
               <p className="text-muted-foreground">
-                Get your VPN credentials and start browsing securely right away
+                Получите ваши VPN данные и начните безопасный интернет-серфинг
+                прямо сейчас
               </p>
             </div>
           </div>
@@ -237,7 +247,7 @@ export default function Index() {
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
-              Start with Telegram Bot
+              Начать с Telegram бота
             </Button>
           </div>
         </div>
@@ -248,10 +258,10 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Simple, Transparent Pricing
+              Простые, прозрачные цены
             </h2>
             <p className="text-xl text-muted-foreground">
-              Choose the plan that works best for you
+              Выберите тариф, который лучше всего подходит для вас
             </p>
           </div>
 
@@ -259,33 +269,33 @@ export default function Index() {
             <Card className="bg-card border-border/50">
               <CardContent className="p-6">
                 <div className="text-center">
-                  <h3 className="text-xl font-semibold mb-2">Basic</h3>
+                  <h3 className="text-xl font-semibold mb-2">Базовый</h3>
                   <div className="text-3xl font-bold mb-4">
                     $4.99
                     <span className="text-lg text-muted-foreground">
-                      /month
+                      /месяц
                     </span>
                   </div>
                   <ul className="space-y-3 mb-6 text-left">
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-primary mr-3" />1
-                      Device
+                      устройство
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-primary mr-3" />
-                      20+ Server Locations
+                      20+ серверов
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-primary mr-3" />
-                      Standard Speed
+                      Стандартная скорость
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-primary mr-3" />
-                      24/7 Support
+                      Поддержка 24/7
                     </li>
                   </ul>
                   <Button className="w-full" variant="outline">
-                    Get Started
+                    Начать
                   </Button>
                 </div>
               </CardContent>
@@ -294,38 +304,38 @@ export default function Index() {
             <Card className="bg-card border-primary/50 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                 <Badge className="bg-primary text-primary-foreground">
-                  Most Popular
+                  Самый популярный
                 </Badge>
               </div>
               <CardContent className="p-6">
                 <div className="text-center">
-                  <h3 className="text-xl font-semibold mb-2">Pro</h3>
+                  <h3 className="text-xl font-semibold mb-2">Про</h3>
                   <div className="text-3xl font-bold mb-4">
                     $8.99
                     <span className="text-lg text-muted-foreground">
-                      /month
+                      /месяц
                     </span>
                   </div>
                   <ul className="space-y-3 mb-6 text-left">
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-primary mr-3" />3
-                      Devices
+                      устройства
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-primary mr-3" />
-                      50+ Server Locations
+                      50+ серверов
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-primary mr-3" />
-                      High Speed
+                      Высокая скорость
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-primary mr-3" />
-                      Priority Support
+                      Приоритетная поддержка
                     </li>
                   </ul>
                   <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                    Get Started
+                    Начать
                   </Button>
                 </div>
               </CardContent>
@@ -334,33 +344,33 @@ export default function Index() {
             <Card className="bg-card border-border/50">
               <CardContent className="p-6">
                 <div className="text-center">
-                  <h3 className="text-xl font-semibold mb-2">Premium</h3>
+                  <h3 className="text-xl font-semibold mb-2">Премиум</h3>
                   <div className="text-3xl font-bold mb-4">
                     $12.99
                     <span className="text-lg text-muted-foreground">
-                      /month
+                      /месяц
                     </span>
                   </div>
                   <ul className="space-y-3 mb-6 text-left">
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-primary mr-3" />5
-                      Devices
+                      устройств
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-primary mr-3" />
-                      All Server Locations
+                      Все серверы
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-primary mr-3" />
-                      Ultra High Speed
+                      Ультра высокая скорость
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-primary mr-3" />
-                      VIP Support
+                      VIP поддержка
                     </li>
                   </ul>
                   <Button className="w-full" variant="outline">
-                    Get Started
+                    Начать
                   </Button>
                 </div>
               </CardContent>
@@ -374,29 +384,30 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Trusted by Thousands
+              Нам доверяют тысячи
             </h2>
             <p className="text-xl text-muted-foreground">
-              Join the community of users who trust us with their privacy
+              Присоединяйтесь к сообществу пользователей, которые доверяют нам
+              свою приватность
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">50+</div>
-              <p className="text-muted-foreground">Countries</p>
+              <p className="text-muted-foreground">Стран</p>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">10K+</div>
-              <p className="text-muted-foreground">Happy Users</p>
+              <p className="text-muted-foreground">Довольных пользователей</p>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">99.9%</div>
-              <p className="text-muted-foreground">Uptime</p>
+              <p className="text-muted-foreground">Аптайм</p>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-              <p className="text-muted-foreground">Support</p>
+              <p className="text-muted-foreground">Поддержка</p>
             </div>
           </div>
 
@@ -412,14 +423,14 @@ export default function Index() {
                   ))}
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  "Fast, reliable, and incredibly easy to use through Telegram.
-                  Best VPN service I've tried!"
+                  "Быстро, надежно и невероятно просто в использовании через
+                  Telegram. Лучший VPN сервис, который я пробовал!"
                 </p>
                 <div className="flex items-center">
                   <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center mr-3">
-                    <span className="text-primary font-semibold">JD</span>
+                    <span className="text-primary font-semibold">ИД</span>
                   </div>
-                  <span className="font-medium">John Doe</span>
+                  <span className="font-medium">Иван Дмитриев</span>
                 </div>
               </CardContent>
             </Card>
@@ -435,14 +446,14 @@ export default function Index() {
                   ))}
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  "The Telegram bot makes it so convenient. Great speeds and
-                  excellent customer support."
+                  "Telegram бот делает всё очень удобным. Отличная скорость и
+                  превосходная поддержка клиентов."
                 </p>
                 <div className="flex items-center">
                   <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center mr-3">
-                    <span className="text-primary font-semibold">MS</span>
+                    <span className="text-primary font-semibold">МС</span>
                   </div>
-                  <span className="font-medium">Maria Silva</span>
+                  <span className="font-medium">Мария Сидорова</span>
                 </div>
               </CardContent>
             </Card>
@@ -458,14 +469,14 @@ export default function Index() {
                   ))}
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  "Perfect for accessing content worldwide. The setup was
-                  incredibly simple and fast."
+                  "Идеально для доступа к контенту по всему миру. Настройка была
+                  невероятно простой и быстрой."
                 </p>
                 <div className="flex items-center">
                   <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center mr-3">
-                    <span className="text-primary font-semibold">AK</span>
+                    <span className="text-primary font-semibold">АК</span>
                   </div>
-                  <span className="font-medium">Alex Kim</span>
+                  <span className="font-medium">Алексей Козлов</span>
                 </div>
               </CardContent>
             </Card>
@@ -477,18 +488,18 @@ export default function Index() {
       <section className="py-20 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Secure Your Internet?
+            Готовы защитить свой интернет?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Start using our VPN service today and experience the internet
-            without limits or fears
+            Начните использовать наш VPN сервис сегодня и ощутите интернет без
+            ограничений и страхов
           </p>
           <Button
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6"
           >
             <MessageCircle className="w-5 h-5 mr-2" />
-            Get VPN via Telegram Bot
+            Получить VPN через Telegram бота
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
         </div>
@@ -504,44 +515,44 @@ export default function Index() {
                 <span className="text-lg font-bold">SecureVPN</span>
               </div>
               <p className="text-muted-foreground">
-                Your privacy is our priority. Secure, fast, and reliable VPN
-                service.
+                Ваша приватность - наш приоритет. Безопасный, быстрый и надежный
+                VPN сервис.
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4">Product</h3>
+              <h3 className="font-semibold mb-4">Продукт</h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li>Features</li>
-                <li>Pricing</li>
-                <li>Server Locations</li>
-                <li>Apps</li>
+                <li>Возможности</li>
+                <li>Цены</li>
+                <li>Расположение серверов</li>
+                <li>Приложения</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4">Support</h3>
+              <h3 className="font-semibold mb-4">Поддержка</h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li>Help Center</li>
-                <li>Contact Us</li>
-                <li>Setup Guides</li>
-                <li>Status</li>
+                <li>Центр помощи</li>
+                <li>Связаться с нами</li>
+                <li>Руководства по настройке</li>
+                <li>Статус</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4">Company</h3>
+              <h3 className="font-semibold mb-4">Компания</h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li>About</li>
-                <li>Privacy Policy</li>
-                <li>Terms of Service</li>
-                <li>Blog</li>
+                <li>О нас</li>
+                <li>Политика конфиденциальности</li>
+                <li>Условия обслуживания</li>
+                <li>Блог</li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-border/40 mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 SecureVPN. All rights reserved.</p>
+            <p>&copy; 2024 SecureVPN. Все права защищены.</p>
           </div>
         </div>
       </footer>
