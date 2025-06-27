@@ -1,4 +1,4 @@
-name: Deploy Landing to Server
+name: Deploy Next.js to Server
 
 on:
   push:
@@ -9,32 +9,48 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Checkout репозитория
     - name: Checkout code
       uses: actions/checkout@v4
 
-    # Установка Node.js
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '22' # Укажите вашу версию Node.js
+        node-version: '22' # Убедитесь, что версия совпадает с вашей
 
-    # Установка зависимостей
-    - name: Install dependencies
-      run: yarn
+    - name: Cache Yarn dependencies
+      uses: actions/cache@v4
+      with:
+        path: ~/.yarn/cache
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
 
-    # Сборка Next.js приложения
+    - name: Install dependencies with Yarn
+      run: yarn install --mode=skip-build
+
     - name: Build Next.js app
       run: yarn build
+      env:
+        NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
 
-    # Передача собранных файлов на сервер
+    - name: Test SSH connection
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        SERVER_IP: ${{ secrets.SERVER_IP }}
+        SERVER_USER: ${{ secrets.SERVER_USER }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H $SERVER_IP >> ~/.ssh/known_hosts
+        ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "echo Connected successfully" || echo "SSH failed"
+
     - name: Deploy to server
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         SERVER_IP: ${{ secrets.SERVER_IP }}
         SERVER_USER: ${{ secrets.SERVER_USER }}
       run: |
-        # Установка SSH-ключа
         mkdir -p ~/.ssh
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
@@ -44,11 +60,13 @@ jobs:
         scp -r .next $SERVER_USER@$SERVER_IP:/var/www/nextjs-app/.next
         scp -r public $SERVER_USER@$SERVER_IP:/var/www/nextjs-app/public
         scp package.json $SERVER_USER@$SERVER_IP:/var/www/nextjs-app/
-        scp package-lock.json $SERVER_USER@$SERVER_IP:/var/www/nextjs-app/
+        scp yarn.lock $SERVER_USER@$SERVER_IP:/var/www/nextjs-app/
+        echo "${{ secrets.ENV_FILE }}" > .env
+        scp .env $SERVER_USER@$SERVER_IP:/var/www/nextjs-app/.env || true
 
         # Выполнение команд на сервере
         ssh $SERVER_USER@$SERVER_IP << 'EOF'
           cd /var/www/nextjs-app
-          yarn
-          pm2 restart nextjs-app || pm2 start npm --name "nextjs-app" -- start -- -p 3000
+          yarn install --production --mode=skip-build
+          pm2 restart nextjs-app || pm2 start yarn --name "nextjs-app" -- start -- -p 3000
         EOF
